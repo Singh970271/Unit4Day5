@@ -1,0 +1,292 @@
+ use assignment
+switched to db assignment
+> db
+assignment
+> show collections
+moviemock
+users
+> db.moviemock.find({}).pretty()
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92de"),
+        "movie_name" : "Burglar",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1992,
+        "Budget" : 16063
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92df"),
+        "movie_name" : "From Dusk Till Dawn 2: Texas Blood Money ",
+        "movie_genre" : "Comedy|Crime|Horror",
+        "production_year" : 2000,
+        "Budget" : 14324
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e0"),
+        "movie_name" : "Thief Lord, The",
+        "movie_genre" : "Adventure|Children|Fantasy",
+        "production_year" : 2013,
+        "Budget" : 15934
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e1"),
+        "movie_name" : "Warm Bodies",
+        "movie_genre" : "Comedy|Horror|Romance",
+        "production_year" : 1992,
+        "Budget" : 12489
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e2"),
+        "movie_name" : "Letter, The (La lettre)",
+        "movie_genre" : "Drama",
+        "production_year" : 1993,
+        "Budget" : 12096
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e3"),
+        "movie_name" : "Usual Suspects, The",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 2013,
+        "Budget" : 14488
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e4"),
+        "movie_name" : "Deadfall",
+        "movie_genre" : "Comedy|Crime|Drama",
+        "production_year" : 2001,
+        "Budget" : 12365
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e5"),
+        "movie_name" : "Shanghai Surprise",
+        "movie_genre" : "Adventure|Crime|Drama|Romance",
+        "production_year" : 2006,
+        "Budget" : 16246
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e6"),
+        "movie_name" : "Necessary War, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 1999,
+        "Budget" : 13379
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e7"),
+        "movie_name" : "Mindwalk",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "Budget" : 11968
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e8"),
+        "movie_name" : "King & Country",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2015,
+        "Budget" : 15984
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e9"),
+        "movie_name" : "No Retreat, No Surrender 2: Raging Thunder",
+        "movie_genre" : "Action|Adventure",
+        "production_year" : 2013,
+        "Budget" : 12103
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92ea"),
+        "movie_name" : "Flesh and the Devil",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2001,
+        "Budget" : 17649
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92eb"),
+        "movie_name" : "Tycoon",
+        "movie_genre" : "Adventure|Drama|Romance",
+        "production_year" : 1995,
+        "Budget" : 10162
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92ec"),
+        "movie_name" : "You've Got Mail",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2000,
+        "Budget" : 14863
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92ed"),
+        "movie_name" : "Back Door to Hell",
+        "movie_genre" : "Drama|War",
+        "production_year" : 1991,
+        "Budget" : 14167
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92ee"),
+        "movie_name" : "Not Another Not Another Movie",
+        "movie_genre" : "Comedy",
+        "production_year" : 2018,
+        "Budget" : 18038
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92ef"),
+        "movie_name" : "Beetlejuice",
+        "movie_genre" : "Comedy|Fantasy",
+        "production_year" : 1994,
+        "Budget" : 14227
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92f0"),
+        "movie_name" : "Bliss",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2007,
+        "Budget" : 12656
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92f1"),
+        "movie_name" : "Something Wild",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "Budget" : 13033
+}
+Type "it" for more
+> db.moviemock.find({"movie_name" :{$eq: "Bliss"}})
+{ "_id" : ObjectId("622ad8a58520e9f5c17a92f0"), "movie_name" : "Bliss", "movie_genre" : "Drama|Romance", "production_year" : 2007, "Budget" : 12656 }
+> db.moviemock.find({ "movie_name" :{$ne:"Beetlejuice"}}).pretty()
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92de"),
+        "movie_name" : "Burglar",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1992,
+        "Budget" : 16063
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92df"),
+        "movie_name" : "From Dusk Till Dawn 2: Texas Blood Money ",
+        "movie_genre" : "Comedy|Crime|Horror",
+        "production_year" : 2000,
+        "Budget" : 14324
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e0"),
+        "movie_name" : "Thief Lord, The",
+        "movie_genre" : "Adventure|Children|Fantasy",
+        "production_year" : 2013,
+        "Budget" : 15934
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e1"),
+        "movie_name" : "Warm Bodies",
+        "movie_genre" : "Comedy|Horror|Romance",
+        "production_year" : 1992,
+        "Budget" : 12489
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e2"),
+        "movie_name" : "Letter, The (La lettre)",
+        "movie_genre" : "Drama",
+        "production_year" : 1993,
+        "Budget" : 12096
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e3"),
+        "movie_name" : "Usual Suspects, The",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 2013,
+        "Budget" : 14488
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e4"),
+        "movie_name" : "Deadfall",
+        "movie_genre" : "Comedy|Crime|Drama",
+        "production_year" : 2001,
+        "Budget" : 12365
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e5"),
+        "movie_name" : "Shanghai Surprise",
+        "movie_genre" : "Adventure|Crime|Drama|Romance",
+        "production_year" : 2006,
+        "Budget" : 16246
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e6"),
+        "movie_name" : "Necessary War, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 1999,
+        "Budget" : 13379
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e7"),
+        "movie_name" : "Mindwalk",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "Budget" : 11968
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e8"),
+        "movie_name" : "King & Country",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2015,
+        "Budget" : 15984
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92e9"),
+        "movie_name" : "No Retreat, No Surrender 2: Raging Thunder",
+        "movie_genre" : "Action|Adventure",
+        "production_year" : 2013,
+        "Budget" : 12103
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92ea"),
+        "movie_name" : "Flesh and the Devil",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2001,
+        "Budget" : 17649
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92eb"),
+        "movie_name" : "Tycoon",
+        "movie_genre" : "Adventure|Drama|Romance",
+        "production_year" : 1995,
+        "Budget" : 10162
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92ec"),
+        "movie_name" : "You've Got Mail",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2000,
+        "Budget" : 14863
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92ed"),
+        "movie_name" : "Back Door to Hell",
+        "movie_genre" : "Drama|War",
+        "production_year" : 1991,
+        "Budget" : 14167
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92ee"),
+        "movie_name" : "Not Another Not Another Movie",
+        "movie_genre" : "Comedy",
+        "production_year" : 2018,
+        "Budget" : 18038
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92f0"),
+        "movie_name" : "Bliss",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2007,
+        "Budget" : 12656
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92f1"),
+        "movie_name" : "Something Wild",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "Budget" : 13033
+}
+{
+        "_id" : ObjectId("622ad8a58520e9f5c17a92f2"),
+        "movie_name" : "Crow, The",
+        "movie_genre" : "Action|Crime|Fantasy|Thriller",
+        "production_year" : 2014,
+        "Budget" : 18524
+}
